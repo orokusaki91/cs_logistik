@@ -15,9 +15,9 @@
 	@if(Session::has('password_reseted'))
 		<script>
 			swal(
-		    'Erledigt!',
-		    '{{ Session::get('password_reseted') }}',
-		    'success'
+		    	'Erledigt!',
+		    	'{{ Session::get('password_reseted') }}',
+		    	'success'
 		    );
 		</script>
 	@endif
