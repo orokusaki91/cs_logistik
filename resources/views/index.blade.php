@@ -30,7 +30,7 @@
     <br><br><br><br>
     <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
     <div class="sredina_levo">
-        <img src="{{ asset('img//sredina/1.png') }}" alt="">
+        <img src="{{ asset('img/sredina/1.jpg') }}" alt="">
     </div>
     <div class="sredina_desno">
         <h3>Die Firma CS Logistik GmbH in Zahlen:</h3>
@@ -49,6 +49,7 @@
         <p>Gerne erarbeiten wir Ihnen, eine auf Ihre Bedürfnisse ausgearbeitete Offerte für unsere Dienstleistungen zur Verfügung.</p>
     </div>
 </div>
+<br><br><br><br>
 <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
 <br><br><br><br>
 <div id="testimonials">
