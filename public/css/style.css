@@ -1568,3 +1568,107 @@ form {
 }
 
 
+
+/* ADMIN PANEL *//* ADMIN PANEL */
+/* ADMIN PANEL *//* ADMIN PANEL */
+/* ADMIN PANEL *//* ADMIN PANEL */
+.admin_panel_head {
+	height:60px;
+	background:#333;
+	overflow:hidden;
+	display:block;
+	z-index:9999;
+	position:relative;
+	box-shadow:0px 1px 4px #333;
+}
+.admin_panel_head h1 {
+	margin:0;
+	float:left;
+	padding:10px;
+	color:#fff;
+}
+.admin_panel_head a {
+	margin:10px;
+	padding:10px;
+	text-decoration:none;
+	color:#fff;
+	border:1px solid #fff;
+	float:right;
+	transition:0.5s ease all;
+	border-radius:5px;
+}
+.admin_panel_head a:hover {
+	color:#333;
+	border:1px solid #333;
+	background:#fff;
+}
+
+.admin_panel_main {
+	z-index:9;
+}
+
+
+
+.admin_panel_main .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #1EB587;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+.admin_panel_main .sidenav a, .admin_panel_main .dropdown-btn {
+    padding: 20px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.admin_panel_main .sidenav a:hover, .admin_panel_main .dropdown-btn:hover {
+    color: #1EB587;
+	background:#fff;
+}
+
+.admin_panel_main .main {
+    margin-left: 200px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+}
+
+.admin_panel_main .active {
+    background-color: #1EB587;
+    color: white;
+}
+
+.admin_panel_main .dropdown-container {
+    display: none;
+    background-color: #262626;
+   
+}
+.admin_panel_main .dropdown-container a {
+	 padding-left: 20px;
+}
+.admin_panel_main .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+@media screen and (max-height: 450px) {
+   .admin_panel_main  .sidenav {padding-top: 15px;}
+    .admin_panel_main .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
