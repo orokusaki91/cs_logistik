@@ -12,10 +12,14 @@ class ContactController extends Controller
 {
     public function post(Request $request) {
     	$validator = Validator::make($request->all(), [
-            'name' => 'required|min:2|max:100',
-            'email' => 'required|email',
-            'subject' => 'required|min:2',
-            'comment' => 'required|min:3',
+            'name' => 'required|max:190',
+            'email' => 'required|email|max:190',
+            'subject' => 'required|max:190',
+            'comment' => 'required',
+        ], [
+            'required' => 'Dieses Feld ist erforderlich',
+            'email' => 'Bitte geben Sie eine gültige Emailadresse ein',
+            'max' => 'Dieses Feld darf nicht mehr als 190 Zeichen beinhalten',
         ]);
 
         if ($validator->passes()) {

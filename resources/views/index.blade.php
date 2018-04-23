@@ -120,22 +120,38 @@
                     </div>
                 </div>
                 <div class="contact_us_desno">
-                    <form action="{{ url('ajax/contact') }}" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                        <p class="thisfield">* Dieses Feld wird benötigt...</p>
+                    <form action="{{ url('ajax/contact') }}" method="post" id="contactForm">
+                        <label for="name">Name*</label>
+                        <input type="text" id="fname" name="name" placeholder="Your name..">
+                        <p class="thisfield">
+                            @if ($errors->has('name'))
+                                {{ $errors->first('name') }}
+                            @endif
+                        </p>
                         <br><br>
-                        <label for="lname">Email</label>
+                        <label for="lname">Email*</label>
                         <input type="text" id="email" name="email" placeholder="Your email..">
-                        <p class="thisfield">* Dieses Feld wird benötigt...</p>
+                        <p class="thisfield">
+                            @if ($errors->has('email'))
+                                {{ $errors->first('email') }}
+                            @endif
+                        </p>
                         <br><br>
-                        <label for="Subject">Subject</label>
+                        <label for="Subject">Subject*</label>
                         <input type="text" id="subject" name="subject" placeholder="Subject..">     
-                        <p class="thisfield">* Dieses Feld wird benötigt...</p>
+                        <p class="thisfield">
+                            @if ($errors->has('subject'))
+                                {{ $errors->first('subject') }}
+                            @endif
+                        </p>
                         <br><br>
-                        <label for="Messages">Messages</label><br><br>
+                        <label for="Messages">Message*</label><br><br>
                         <textarea style="max-width:98%;" rows="6" cols="79" name="comment" form="usrform"></textarea>
-                        <p class="thisfield">* Dieses Feld wird benötigt...</p>
+                        <p class="thisfield">
+                            @if ($errors->has('comment'))
+                                {{ $errors->first('comment') }}
+                            @endif
+                        </p>
                         {{ csrf_field() }}
                         <input type="submit" value="Submit">
                     </form>
@@ -152,7 +168,6 @@
     $(function () {
         $('#contactForm').submit(function (e) {
             e.preventDefault();
-            console.log('entered');
             var form = $(this);
             var formData = form.serialize();
             $.ajax({

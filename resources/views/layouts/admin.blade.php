@@ -6,6 +6,6 @@
     <body>
         @include('partials.admin._nav')
         @yield('content')
-        @include('partials._footer')
+        @include('partials.admin._footer')
     </body>
 </html>
