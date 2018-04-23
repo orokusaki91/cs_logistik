@@ -10,7 +10,7 @@
  <head>  
      <div class="admin_panel_head"><!-- admin_panel_head -->
         <h1>Administrator</h1>
-        <a href="#">Log out</a>
+        <a href="{{ url('admin/logout') }}">Log out</a>
      </div><!-- kraj admin_panel_head -->
  </head>
     
