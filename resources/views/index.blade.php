@@ -197,13 +197,13 @@
 
         @if(Session::has('success'))
         swal(
-            '{{ __('headings.account_created_title') }}',
+            'Erledigt!',
             '{{ Session::get('success') }}',
             'success'
             );
         @elseif(Session::has('error'))
         swal(
-            '{{ __('headings.account_created_title') }}',
+            'Fehler!',
             '{{ Session::get('error') }}',
             'error'
             );
