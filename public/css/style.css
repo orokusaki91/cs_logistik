@@ -241,6 +241,7 @@ header {
 }
 .sredina_levo img {
 	width:100%;
+	height:100%;
 }
 .sredina_desno {
 	width:50%;
@@ -647,7 +648,7 @@ header {
 #services2 input:checked + label {
   color: #09181F;
   border: 1px solid #ddd;
-  border-top: 3px solid #DFC379;
+  border-top: 3px solid #1EB587;
   border-bottom: 1px solid #fff;
 }
 
@@ -915,7 +916,7 @@ header {
 #contact input[type=submit]:active {
 }
 #contact input[type=submit]:hover {
-	background:#DFC379;
+	background:#1EB587;
 	box-shadow:2px 2px 4px #333;
 }
 form {
