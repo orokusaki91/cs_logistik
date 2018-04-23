@@ -183,7 +183,8 @@
                     var errors = response.errors;
                     if ($.isEmptyObject(errors)) {
                         location.reload();
-                    } else { 
+                    } else {
+                        submitButton.attr('disabled', false);
                         // print the errors
                         $.each(errors, function (key, val) {
                             var input = form.find('[name="'+ key +'"]');

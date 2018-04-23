@@ -1682,3 +1682,14 @@ form {
 
 
 
+input:disabled,
+input[disabled] {
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+input:disabled:hover,
+input[disabled]:hover {
+	cursor: not-allowed !important;
+}

@@ -7,48 +7,14 @@
 @stop
 
 @section('content')
- <head>  
-     <div class="admin_panel_head"><!-- admin_panel_head -->
-        <h1>Administrator</h1>
-        <form action="{{ url('admin/logout') }}" method="post">
-        	{{ csrf_field() }}
-        	<button type="submit">Log out</button>
-        </form>
-     </div><!-- kraj admin_panel_head -->
- </head>
-    
-  <nav>
 
-</head>
-<body> 
-
+  
 <div class="admin_panel_main"> <!-- admin_panel_main -->
 
-    <div class="sidenav">
-      <a href="#">Lorem ipsum</a>
-      <a href="#">Lorem ipsum</a>
-      <a href="#">Lorem ipsum</a>
-      <a href="#">Lorem ipsum</a>
-          <button class="dropdown-btn">Lorem ipsum 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-          
-      <a href="#contact">Lorem ipsum </a>
-    </div>
-
+@include('partials.admin._sidebar')
     <div class="main">
-      
-      
-      
-    </div>
-</div> <!-- kraj admin_panel_main -->
 
-  </nav>
+    </div>
 @stop
 
 @section('scripts')
