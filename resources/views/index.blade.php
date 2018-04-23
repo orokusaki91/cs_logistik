@@ -146,7 +146,7 @@
                         </p>
                         <br><br>
                         <label for="Messages">Message*</label><br><br>
-                        <textarea style="max-width:98%;" rows="6" cols="79" name="comment" form="usrform"></textarea>
+                        <textarea style="max-width:98%;" rows="6" cols="79" name="comment"></textarea>
                         <p class="thisfield">
                             @if ($errors->has('comment'))
                                 {{ $errors->first('comment') }}
