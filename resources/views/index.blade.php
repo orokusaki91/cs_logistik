@@ -171,6 +171,8 @@
             e.preventDefault();
             var form = $(this);
             var formData = form.serialize();
+            var submitButton = form.find('input[type="submit"]');
+            submitButton.attr('disabled', true);
             $.ajax({
                 url: 'ajax/contact',
                 data: formData,

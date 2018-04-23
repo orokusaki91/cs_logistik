@@ -7,8 +7,6 @@
 @stop
 
 @section('content')
-<<<<<<< HEAD
-	
  <head>  
      <div class="admin_panel_head"><!-- admin_panel_head -->
         <h1>Administrator</h1>
@@ -48,42 +46,6 @@
 </div> <!-- kraj admin_panel_main -->
 
   </nav>
-
-
-
-
-
-
-
-
-
-
-    <script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-</script>
-    
-    
-    
-    
-    
-    
-    
-=======
-	Admin Dashboard
 @stop
 
 @section('scripts')
@@ -97,5 +59,20 @@ for (i = 0; i < dropdown.length; i++) {
 		    );
 		</script>
 	@endif
->>>>>>> ccb9efae1074f35e6f968cd88c814d27e28ea978
+
+  <script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
 @stop
