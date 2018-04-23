@@ -5,7 +5,7 @@
                 <i class="fa fa-bars fa-2x"></i>
             </div>
             <div class="logo">
-                <a href="index.html"><img src="{{ asset('img/logo.png') }}" alt=""></a>
+                <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" alt=""></a>
             </div>
             <div class="menu">
                 <ul>

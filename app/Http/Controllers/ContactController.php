@@ -25,7 +25,7 @@ class ContactController extends Controller
         if ($validator->passes()) {
             try {
 	            Mail::to('disabledbyfb@gmail.com')->send(new ContactMail($request));
-	        	Session::flash('success', );
+	        	Session::flash('success', 'Vielen Dank für Ihre Nachricht. Wir melden uns innert 48 Stunden bei Ihnen.');
 	        } catch (Exception $e) {
 	            Session::flash('error', 'Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.');
 	        }
