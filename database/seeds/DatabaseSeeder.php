@@ -6,6 +6,9 @@ class DatabaseSeeder extends Seeder
 {
 	protected $toTruncate = [
         'users',
+        'pages',
+        'page_codes',
+        'page_contents',
 	];
 
     /**
@@ -22,5 +25,8 @@ class DatabaseSeeder extends Seeder
         }
 
         $this->call(UsersTableSeeder::class);
+        $this->call(PageTableSeeder::class);
+        $this->call(PageCodeTableSeeder::class);
+        $this->call(PageContentTableSeeder::class);
     }
 }

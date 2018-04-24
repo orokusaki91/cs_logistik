@@ -28,5 +28,6 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('admin/home/edit', 'AdminController@getHomeEdit');
-Route::post('admin/home/edit', 'AdminController@postHomeEdit');
+Route::get('admin/pages/{page}', 'AdminController@getPage');
+Route::put('admin/pages/update', 'AdminController@postPage');
+
