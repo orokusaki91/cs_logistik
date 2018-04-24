@@ -1586,6 +1586,7 @@ form {
 	float:left;
 	padding:10px;
 	color:#fff;
+	margin-top:5px;
 }
 .admin_panel_head button[type=submit] {
 	margin:10px;
@@ -1598,6 +1599,7 @@ form {
 	border-radius:5px;
 	background:#333;
 	outline:none;
+	margin-top:12px;
 }
 .admin_panel_head button[type=submit]:hover {
 	color:#333;
@@ -1618,7 +1620,7 @@ form {
     position: fixed;
     top: 60px;
     left: 0;
-    background-color: #1EB587;
+    background-color: #4387FF;
     overflow-x: hidden;
     padding-top: 50px;
 }
@@ -1638,7 +1640,7 @@ form {
 }
 
 .admin_panel_main .sidenav a:hover, .admin_panel_main .dropdown-btn:hover {
-    color: #1EB587;
+    color: #4387FF;
 	background:#fff;
 }
 
@@ -1649,8 +1651,8 @@ form {
 }
 
 .admin_panel_main .active {
-    background-color: #1EB587;
-    color: white;
+    background-color: #fff;
+    color: #4387FF;
 }
 
 .admin_panel_main .dropdown-container {
