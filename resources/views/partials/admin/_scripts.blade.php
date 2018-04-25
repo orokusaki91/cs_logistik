@@ -29,6 +29,14 @@
         /* toolbar */
         toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
 
+        setup: function(editor) {
+            editor.on('change load', function() {
+                var iframeBodyMCE = $(tinymce.$(document.body)[0]).find('iframe').contents().find('#tinymce');
+                iframeBodyMCE.find('span').css('color', '#000');
+                iframeBodyMCE.children().css('color', '#000');
+            });
+        },
+
         /* style */
         style_formats: [
         {title: "Headers", items: [
