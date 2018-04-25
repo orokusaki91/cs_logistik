@@ -98,7 +98,7 @@
                                 {{ $errors->first('name') }}
                             @endif
                         </p>
-                        <br><br>
+                        <br>
                         <label for="lname">Email*</label>
                         <input type="text" id="email" name="email" placeholder="Your email..">
                         <p class="thisfield">
@@ -106,7 +106,7 @@
                                 {{ $errors->first('email') }}
                             @endif
                         </p>
-                        <br><br>
+                        <br>
                         <label for="Subject">Subject*</label>
                         <input type="text" id="subject" name="subject" placeholder="Subject..">     
                         <p class="thisfield">
@@ -115,8 +115,8 @@
                             @endif
                         </p>
                         <br><br>
-                        <label for="Messages">Message*</label><br><br>
-                        <textarea style="max-width:100%;" rows="6" cols="79" name="comment"></textarea>
+                        <label for="Messages">Message*</label><br>
+                        <textarea style="width:99%;" rows="6" cols="79" name="comment"></textarea>
                         <p class="thisfield">
                             @if ($errors->has('comment'))
                                 {{ $errors->first('comment') }}
