@@ -68,7 +68,14 @@ class PageContentTableSeeder extends Seeder
         $pageContent->page_id = 4;
         $pageContent->image = 'road_sign_rectangal_blank.png';
         $pageContent->title = 'Transport Schweiz';
-        $pageContent->text = '';
+        $pageContent->text = '<p>Wir beliefern die ganze Schweiz mit St&uuml;ckguttransport oder als Teil- und Ganzwagenladung. Auch bieten wir Extrafahrten f&uuml;r St&uuml;ckguttransporte. Geniessen Sie von unserer hohen Dienstleistungsqualit&auml;t.</p>
+<ul>
+<li>Bereitstellung von qualitativ hochwertigen Transportdienstleistungen f&uuml;r alle unsere Kunden</li>
+<li>Wir investieren in unsere Angestellten, um einen besseren Service und Unternehmenswachstum zu bieten</li>
+<li>Wir sorgen uns um unsere Umwelt mit den neuesten Standards unserer Branche</li>
+<li>Die Sicherheit hat bei uns oberste Priorit&auml;t bei der Gew&auml;hrleistung sicherer Arbeitsabl&auml;ufe</li>
+<li>Wir investieren in neueste Technologien, um schnelle, pr&auml;zise und kosteneffektive Dienstleistungen zu bieten</li>
+</ul>';
         $pageContent->page_code_id = 7;
         $pageContent->save();
 
@@ -76,7 +83,12 @@ class PageContentTableSeeder extends Seeder
         $pageContent->page_id = 4;
         $pageContent->image = 'road_sign_rectangal_blank.png';
         $pageContent->title = 'Lagerung'; 
-        $pageContent->text = '';
+        $pageContent->text = '<ul>
+<li>Wir verf&uuml;gen &uuml;ber rund 2000m2 Grundfl&auml;che f&uuml;r den Umschlag und Lagerung von G&uuml;tern.</li>
+<li>Zus&auml;tzliche Stellpl&auml;tze f&uuml;r 1100 Paletten.</li>
+<li>Wir vermieten Lagerfl&auml;chen individuell nach Kundenwunsch.</li>
+<li>Wir verwalten das Lager zuverl&auml;ssig und kompetent.</li>
+</ul>';
         $pageContent->page_code_id = 7;
         $pageContent->save();
     }
