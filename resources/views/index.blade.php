@@ -11,18 +11,18 @@
 <div id="main" class="sredina">
     <div class="main">
         <img src="{{ asset('img/main/1.png') }}">
-        <h5>Kompetent</h5>
-        <p>Unsere Kunden geniessen von unseren Erfahrungen und Fachkenntnissen.</p>
+        <h5>{!! $homeFooter1->title !!}</h5>
+        {!! $homeFooter1->text !!}
     </div>
     <div class="main">
         <img src="{{ asset('img/main/2.png') }}">
-        <h5>Partnerschaftlich</h5>
-        <p>Wir pflegen unsere langjährigen Partnerschaften und freuen uns auch Sie in Zukunft als unseren Partner und Kunden begrüssen zu dürfen.</p>
+        <h5>{!! $homeFooter2->title !!}</h5>
+        {!! $homeFooter2->text !!}
     </div>
     <div class="main">
         <img src="{{ asset('img/main/3.png') }}">
-        <h5>Effizient</h5>
-        <p>Eine schnelle und umweltfreundliche Lieferung mit unserer Flotte hat bei uns oberste Priorität.</p>
+        <h5>{!! $homeFooter3->title !!}</h5>
+        {!! $homeFooter3->text !!}
     </div>
 </div>
 <!-- Middle -->
@@ -30,32 +30,24 @@
     <br><br><br><br>
     <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
     <div class="sredina_levo">
-        <img src="{{ asset('img/sredina/1.jpg') }}" alt="">
+        <img src="{{ asset('storage/uploads/about_us/' . $aboutUs->image) }}" alt="">
     </div>
     <div class="sredina_desno">
         <h3>Die Firma CS Logistik GmbH in Zahlen:</h3>
         <img src="{{ asset('img/kosa-bela.png') }}" alt="" class="kosa-bela">
         <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina1">
-        <p>Wir beschäftigen im Moment 16 Fahrzeuge von Lieferwagen bis Hänger Zug und Sattelschlepper für die Stückgutverteilung in der Schweiz.</p>
         <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina2">
-        <p>Bedient wird täglich die ganze Schweiz ausser das Wallis, den Tessin und Graubünden. Diese 3 Regionen beliefern wir mit unseren regionalen Partnern innert 48 Stunden.</p>
         <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina3">
-        <p>- Unser Umschlagslager hat eine Grundfläche von rund 2000 m2<br>
-            - Zusätzlich Stellplätze in den Regalen 1100 Paletten<br>
-            - Bühne für Lager oder kommisionier Arbeiten 350 m2<br>
-            - Rampenplätze für Kleinfahrzeuge 4<br>
-        - Rampenplätze für LKW&#39;s 15</p>
-        <p>Der komplette Lagerraum ist vom Zollamt Pratteln für externe Spediteure als zugelassener Empfänger abgenommen und bewilligt.</p>
-        <p>Gerne erarbeiten wir Ihnen, eine auf Ihre Bedürfnisse ausgearbeitete Offerte für unsere Dienstleistungen zur Verfügung.</p>
+        {!! $aboutUs->text !!}
     </div>
 </div>
 <br><br><br><br>
 <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
 <br><br><br><br>
-<div id="testimonials">
+<div id="testimonials" style="background: url({{ asset('storage/uploads/slogan/' . $slogan->image) }}) fixed no-repeat center;">
     <div class="wrapper">
         <div class="slider">
-            <h1>Kein Weg ist zu schwer</h1>    
+            {!! $slogan->text !!}
         </div>
     </div>
 </div>
@@ -64,39 +56,16 @@
     <div id="services">
         <h1>Dienstleistungen</h1>
         <div id="services2">
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1">Transport Schweiz</label>
-            <input id="tab2" type="radio" name="tabs">
-            <label for="tab2">Lagerung</label>
-            <section id="content1">
-                <img src="{{ asset('img/where_are_you_from/road_sign_rectangal_blank.png') }}" alt="">
-                <div class="content1">
-                    <p>Wir beliefern die ganze Schweiz mit Stückguttransport oder als Teil- und Ganzwagenladung. Auch bieten wir Extrafahrten für Stückguttransporte.
-                    Geniessen Sie von unserer hohen Dienstleistungsqualität.</p>
-
-                    <ul>
-                        <li>Bereitstellung von qualitativ hochwertigen Transportdienstleistungen für alle unsere Kunden</li>
-                        <li>Wir investieren in unsere Angestellten, um einen besseren Service und Unternehmenswachstum zu bieten</li>
-                        <li>Wir sorgen uns um unsere Umwelt mit den neuesten Standards unserer
-                        Branche</li>
-                        <li>Die Sicherheit hat bei uns oberste Priorität bei der Gewährleistung sicherer Arbeitsabläufe</li>
-                        <li>Wir investieren in neueste Technologien, um schnelle, präzise und
-                        kosteneffektive Dienstleistungen zu bieten</li>
-                    </ul>       
-                </div>       
-            </section>
-            <section id="content2">
-                <img src="{{ asset('img/where_are_you_from/road_sign_rectangal_blank.png') }}" alt="">
-                <div class="content1">
-                    <ul>
-                        <li>Wir verfügen über rund 2000m2 Grundfläche für den Umschlag und Lagerung von Gütern.</li>
-                        <li>Zusätzliche Stellplätze für 1100 Paletten.</li>
-                        <li>Wir vermieten Lagerflächen individuell nach Kundenwunsch.</li>
-                        <li>Wir verwalten das Lager
-                        zuverlässig und kompetent.</li>
-                    </ul>
-                </div>
-            </section>
+            @php $i = 1; @endphp
+            @foreach($services as $service)
+                <input id="tab{{ $i }}" type="radio" name="tabs" checked>
+                <label for="tab{{ $i }}">{{ $service->title }}</label>
+                <section id="content1">
+                    <img src="{{ asset('storage/uploads/service/' . $service->image) }}" alt="">
+                    <div class="content1">{!! $service->text !!}</div>       
+                </section>
+                @php $i++; @endphp
+            @endforeach
         </div>
     </div>
 </div>

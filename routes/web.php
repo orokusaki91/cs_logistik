@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index');
 
 Route::post('ajax/contact', 'ContactController@post');
 
@@ -30,4 +28,8 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('admin/pages/{page}', 'AdminController@getPage');
 Route::put('admin/pages/update', 'AdminController@postPage');
+Route::get('admin/pages/services/create', 'AdminController@createService');
+Route::post('admin/pages/services/store', 'AdminController@storeService');
+Route::get('admin/pages/services/{page_content_id}/edit', 'AdminController@editService');
+Route::put('admin/pages/services/{page_content_id}/update', 'AdminController@updateService');
 

@@ -36,19 +36,75 @@ class AdminController extends Controller
 	    //         'image_1' => 'dimensions:min_width=1920,min_height=1080'
 	    //     ]);
     	// }
+
     	$pageContents = PageContent::where('page_id', $request->page_id)->get();
+        $slug = Page::where('id', $request->page_id)->value('slug');
+
     	foreach ($pageContents as $key => $pageContent) {
     		$key = $key+1;
     		$title = 'title_' . $key;
     		$image = 'image_' . $key;
-    		$image = uploadImage($request->$image, 'uploads/home');
+    		$image = uploadImage($request->$image, 'uploads/' . $slug);
     		$text = 'text_' . $key;
     		$pageContentUpdate = PageContent::findOrFail($pageContent->id);
     		$pageContentUpdate->title = $request->$title;
-    		$pageContentUpdate->image = $image;
+    		$pageContentUpdate->image = $image ? $image : $pageContentUpdate->image;
     		$pageContentUpdate->text = $request->$text;
     		$pageContentUpdate->save();
     	}
-    	return redirect()->back();
+
+    	return redirect()->action('AdminController@getPage', ['page' => $slug]);
+    }
+
+    public function createService()
+    {
+        $pages = Page::all();
+        return view('admin.pages.services_new', compact('pages'));
+    }
+
+    public function storeService(Request $request)
+    {
+        // if ($request->has(image_1)) {
+        //  $this->validate($request, [
+        //         'image_1' => 'dimensions:min_width=1920,min_height=1080'
+        //     ]);
+        // }
+
+        $image = uploadImage($request->image_1, 'uploads/services');
+        $pageContentUpdate = new PageContent;
+        $pageContentUpdate->title = $request->title_1;
+        $pageContentUpdate->image = $image ? $image : $pageContentUpdate->image;
+        $pageContentUpdate->text = $request->text_1;
+        $pageContentUpdate->page_code_id = 7;
+        $pageContentUpdate->save();
+
+        return redirect()->action('AdminController@getPage', ['page_slug' => 'services']);
+    }
+
+    public function editService($page_content_id)
+    {
+        $pages = Page::all();
+        $page = Page::where('slug', 'services')->first();
+        $serviceContent = PageContent::findOrFail($page_content_id);
+
+        return view('admin.pages.services_edit', compact('pages', 'page', 'page_slug', 'serviceContent'));
+    }
+
+    public function updateService(Request $request, $page_content_id)
+    {
+        // if ($request->has(image_1)) {
+        //  $this->validate($request, [
+        //         'image_1' => 'dimensions:min_width=1920,min_height=1080'
+        //     ]);
+        // }
+
+        $image = uploadImage($request->image_1, 'uploads/services');
+        $pageContentUpdate = PageContent::findOrFail($page_content_id);
+        $pageContentUpdate->title = $request->title_1;
+        $pageContentUpdate->image = $image ? $image : $pageContentUpdate->image;
+        $pageContentUpdate->text = $request->text_1;
+        $pageContentUpdate->save();
+
+        return redirect()->action('AdminController@getPage', ['page_slug' => 'services']);
     }
 }

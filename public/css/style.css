@@ -255,7 +255,7 @@ header {
 .sredina_desno h3 {
 	color:#fff;
 	margin-bottom:0;
-	padding:30px;
+	padding:0px 30px 30px 30px;
 	padding-bottom:0;
 	font-weight:normal;
 }
@@ -272,6 +272,10 @@ header {
 	padding-left:40px;
 	width:85%;
 	font-size:15px;
+}
+
+.sredina_desno ul li{
+	color: #fff;
 }
 
 .sredina_desno .kosa-bela {
@@ -1694,4 +1698,23 @@ input[disabled] {
 input:disabled:hover,
 input[disabled]:hover {
 	cursor: not-allowed !important;
+}
+
+
+.image-tooltip img {
+	width: auto;
+}
+
+.image-tooltip {
+    text-decoration: none;
+    position: relative;
+}
+.image-tooltip span {
+    display: none;
+}
+.image-tooltip:hover span {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
 }

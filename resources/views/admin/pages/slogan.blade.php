@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Admin About Us')
+@section('title', 'Admin Slogan')
 
 @section('content')
 <div class="admin_panel_main">

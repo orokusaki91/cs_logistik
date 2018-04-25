@@ -1,5 +1,5 @@
 <div id="navigation">
-    <header>
+    <header style="background: url({{ asset('storage/uploads/home/' . $homeHeader->image) }}) no-repeat 50% 50%">
         <nav>
             <div class="menu-icon">
                 <i class="fa fa-bars fa-2x"></i>
@@ -16,9 +16,6 @@
                 </ul>
             </div>
         </nav>
-        <div class="header_text">
-           <p><span class="header_text_zelena">Herzlich Willkommen</span> <br>auf unserer Webseite.
-            <br><span class="header_text_zelena1">Wir sind Ihr Anprechpartner <br>für Logistik in der Schweiz.</span></p>
-        </div>
+        <div class="header_text">{!! $homeHeader->text !!}</div>
     </header>
 </div>

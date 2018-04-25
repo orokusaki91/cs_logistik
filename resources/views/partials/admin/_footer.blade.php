@@ -1,2 +1,2 @@
-@include('partials._scripts')
+@include('partials.admin._scripts')
 @yield('scripts')
