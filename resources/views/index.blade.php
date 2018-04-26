@@ -56,15 +56,15 @@
     <div id="services">
         <h1>Dienstleistungen</h1>
         <div id="services2">
-            @php $i = 1; @endphp
-            @foreach($services as $service)
-                <input id="tab{{ $i }}" type="radio" name="tabs" checked>
-                <label for="tab{{ $i }}">{{ $service->title }}</label>
-                <section id="content1">
-                    <img src="{{ asset('storage/uploads/service/' . $service->image) }}" alt="">
-                    <div class="content1">{!! $service->text !!}</div>       
+            @foreach($services as $key => $service)
+                <input id="tab{{ $key+1 }}" type="radio" name="tabs" {{ $key+1 == 1 ? 'checked' : '' }}>
+                <label for="tab{{ $key+1 }}">{{ $service->title }}</label>
+            @endforeach
+            @foreach($services as $key => $service)
+                <section id="content{{ $key+1}}">
+                    <img src="{{ asset('storage/uploads/services/' . $service->image) }}" alt="" style="width: 200px;" height="auto">
+                    <div class="content">{!! $service->text !!}</div>       
                 </section>
-                @php $i++; @endphp
             @endforeach
         </div>
     </div>

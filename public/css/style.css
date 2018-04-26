@@ -621,32 +621,26 @@ header {
   cursor: pointer;
 }
 
-#services2 #content1 p {
+#services2 section p {
 	letter-spacing:0.5px;
 	font-size:16px;
 	line-height:25px;
 }
-#services2 #content2 p {
-	letter-spacing:0.5px;
-	font-size:16px;
-	line-height:25px;
+#services2 .content {
+	margin-left: 300px;
 }
-#services2 .content1 {
-	float:right;
-	width:65%;
-}
-#services2 #content1 img {
+#services2 section img {
 	float:left;
 	margin-top:60px;
 }
-#services2 #content2 img {
+#services2 section img {
 	float:left;
 	margin-top:60px;
 }
-#services2 .content1  ul {
+#services2 .content  ul {
 	margin-top:40px;
 }
-#services2 .content1  ul li {
+#services2 .content  ul li {
 	margin-top:10px;
 }
 
@@ -661,9 +655,15 @@ header {
 #services2 #tab1:checked ~ #content1,
 #services2 #tab2:checked ~ #content2,
 #services2 #tab3:checked ~ #content3,
-#services2 #tab4:checked ~ #content4 {
-  display: block;
+#services2 #tab5:checked ~ #content5,
+#services2 #tab5:checked ~ #content5,
+#services2 #tab7:checked ~ #content7,
+#services2 #tab8:checked ~ #content8,
+#services2 #tab9:checked ~ #content9,
+#services2 #tab10:checked ~ #content10 {
+ 	display: block;
 }
+
 
 @media screen and (max-width: 650px) {
   #services2 label {
@@ -1135,17 +1135,16 @@ form {
 	#contact .mapa iframe {
 		width:95%
 	}
-	
-		#services2 #content1 img {
+		#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 #content2 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	
 	}
-	#services2 .content1 {
+	#services2 .content {
 		margin-right:5%;
 		float:none;
 		width:90%;
@@ -1237,16 +1236,16 @@ form {
 	#navigation nav.black ul li a:hover {
 	color:#1EB587;
 	}
-	#services2 #content1 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 #content2 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	
 	}
-	#services2 .content1 {
+	#services2 .content {
 		margin-right:5%;
 		float:none;
 		width:90%;
@@ -1350,28 +1349,20 @@ form {
 	#navigation nav.black ul li a:hover {
 	color:#1EB587;
 	}
-	#services2 #content1 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 #content2 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 .content1 {
+	#services2 .content {
 		margin-right:5%;
 		float:none;
 		width:90%;
 	}
 	}
-
-
-
-
-
-
-
-
 
 @media (max-width: 320px) {
 		.sredina {
@@ -1468,15 +1459,15 @@ form {
 	color:#1EB587;
 	}
 	
-	#services2 #content1 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 #content2 img {
+	#services2 section img {
 		float:none;
 		margin-bottom:20px;
 	}
-	#services2 .content1 {
+	#services2 .content {
 		margin-right:5%;
 		float:none;
 		width:90%;
