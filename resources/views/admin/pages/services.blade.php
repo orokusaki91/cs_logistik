@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 @section('title', 'Admin Services')
 
+@section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.0/sweetalert2.min.css">
+@stop
+
 @section('content')
 <div class="admin_panel_main">
     @include('partials.admin._sidebar')
@@ -48,15 +52,25 @@
 @stop
 
 @section('scripts')
-<script>
-    var tooltips = document.querySelectorAll('.image-tooltip span');
-    window.onmousemove = function (e) {
-        var x = (e.clientX + 20) + 'px',
-        y = (e.clientY + 20) + 'px';
-        for (var i = 0; i < tooltips.length; i++) {
-            tooltips[i].style.top = y;
-            tooltips[i].style.left = x;
-        }
-    };
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.0/sweetalert2.all.min.js"></script>
+    <script>
+        var tooltips = document.querySelectorAll('.image-tooltip span');
+        window.onmousemove = function (e) {
+            var x = (e.clientX + 20) + 'px',
+            y = (e.clientY + 20) + 'px';
+            for (var i = 0; i < tooltips.length; i++) {
+                tooltips[i].style.top = y;
+                tooltips[i].style.left = x;
+            }
+        };
+    </script>
+    @if(Session::has('error'))
+        <script>
+            swal(
+            'Error',
+            '{{ Session::get('error') }}',
+            'error'
+            );
+        </script>
+    @endif
 @stop

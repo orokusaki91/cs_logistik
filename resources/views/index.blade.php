@@ -51,24 +51,28 @@
         </div>
     </div>
 </div>
-<div class="sredina">
-    <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
-    <div id="services">
-        <h1>Dienstleistungen</h1>
-        <div id="services2">
-            @foreach($services as $key => $service)
-                <input id="tab{{ $key+1 }}" type="radio" name="tabs" {{ $key+1 == 1 ? 'checked' : '' }}>
-                <label for="tab{{ $key+1 }}">{{ $service->title }}</label>
-            @endforeach
-            @foreach($services as $key => $service)
-                <section id="content{{ $key+1}}">
-                    <img src="{{ asset('storage/uploads/services/' . $service->image) }}" alt="" style="width: 200px;" height="auto">
-                    <div class="content">{!! $service->text !!}</div>       
-                </section>
-            @endforeach
+
+@if($services->count() > 0)
+    <div class="sredina">
+        <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
+        <div id="services">
+            <h1>Dienstleistungen</h1>
+            <div id="services2">
+                @foreach($services as $key => $service)
+                    <input id="tab{{ $key+1 }}" type="radio" name="tabs" {{ $key+1 == 1 ? 'checked' : '' }}>
+                    <label for="tab{{ $key+1 }}">{{ $service->title }}</label>
+                @endforeach
+                @foreach($services as $key => $service)
+                    <section id="content{{ $key+1}}">
+                        <img src="{{ asset('storage/uploads/services/' . $service->image) }}" alt="" style="width: 200px;" height="auto">
+                        <div class="content">{!! $service->text !!}</div>       
+                    </section>
+                @endforeach
+            </div>
         </div>
     </div>
-</div>
+@endif
+
 <div class="sredina"> 
     <div id="contact"> 
         <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
