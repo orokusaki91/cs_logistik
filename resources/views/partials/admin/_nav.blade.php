@@ -5,6 +5,7 @@
 			<form action="{{ url('admin/logout') }}" method="post">
 	      		{{ csrf_field() }}
 	      		<button type="submit">Log out</button>
+                <button type="submit" class="fa-power-off2"><i class="fa fa-power-off" aria-hidden="true"></i></button>
 	      	</form>
      	@endif
    </div>
