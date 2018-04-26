@@ -32,4 +32,5 @@ Route::get('admin/pages/services/create', 'AdminController@createService');
 Route::post('admin/pages/services/store', 'AdminController@storeService');
 Route::get('admin/pages/services/{page_content_id}/edit', 'AdminController@editService');
 Route::put('admin/pages/services/{page_content_id}/update', 'AdminController@updateService');
+Route::post('admin/pages/services/{page_content_id}/delete', 'AdminController@deleteService');
 

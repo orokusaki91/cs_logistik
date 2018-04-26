@@ -107,4 +107,11 @@ class AdminController extends Controller
 
         return redirect()->action('AdminController@getPage', ['page_slug' => 'services']);
     }
+
+    public function deleteService(Request $request, $page_content_id)
+    {
+        $service = PageContent::findOrFail($page_content_id);
+        $service->delete();
+        return redirect()->action('AdminController@getPage', ['page_slug' => 'services']);
+    }
 }

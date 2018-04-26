@@ -29,7 +29,13 @@
                                 
                             </td>
                             <td>{{ $service['title'] }}</td>
-                            <td><a href="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/edit') }}">Bearbeiten</a></td>
+                            <td>
+                                <a href="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/edit') }}">Bearbeiten</a>
+                                <form action="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/delete') }}">
+                                    @csrf
+                                    <button type="submit" onclick="return confirm('Are you sure?')">Löschen</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 @else
