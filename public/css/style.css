@@ -1930,6 +1930,26 @@ input[disabled]:hover {
 
 
 @media (max-width: 320px) {
+	.admin_panel_main .sidenav {
+		min-height:200px !important;
+		width:100%;
+		top: 60px;
+		left: 0;
+		background-color: #4387FF;
+		overflow: hidden;
+		padding-top: 20px;
+		position:relative;
+		display:block;
+		
+		}
+		
+		.admin_panel_main .main {
+		height: 100%;
+		width: 99%;
+		display: block;
+		left: 20px;
+		overflow-x: hidden;
+		}
 }
 
 
