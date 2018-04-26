@@ -19,6 +19,9 @@
             <h3>Header</h3>
             <label>Image</label>
             <input type="file" name="image_1">
+            @if($homeHeader['image'])
+                <img src="{{ asset('storage/uploads/home/' . $homeHeader['image']) }}" class="ap_pi">
+            @endif
             <textarea name="text_1">{{ $homeHeader['text'] }}</textarea>
 
             <h3>Footer 1</h3>

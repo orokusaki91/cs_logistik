@@ -11,6 +11,9 @@
     
             <label>Image</label>
             <input type="file" name="image_1">
+            @if($$serviceContent->image)
+                <img src="{{ asset('storage/uploads/services/' . $serviceContent->image) }}" class="ap_pi">
+            @endif
             <label>Title</label>
             <input type="text" name="title_1" value="{{ $serviceContent->title }}">
             <label>Text</label>

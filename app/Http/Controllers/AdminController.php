@@ -44,7 +44,7 @@ class AdminController extends Controller
     		$key = $key+1;
     		$title = 'title_' . $key;
     		$image = 'image_' . $key;
-    		$image = uploadImage($request->$image, 'uploads/' . $slug);
+    		$image = uploadImage($request->$image, 'public/uploads/' . $slug);
     		$text = 'text_' . $key;
     		$pageContentUpdate = PageContent::findOrFail($pageContent->id);
     		$pageContentUpdate->title = $request->$title;
@@ -70,8 +70,9 @@ class AdminController extends Controller
         //     ]);
         // }
 
-        $image = uploadImage($request->image_1, 'uploads/services');
+        $image = uploadImage($request->image_1, 'public/uploads/services');
         $pageContentUpdate = new PageContent;
+        $pageContentUpdate->page_id = 4;
         $pageContentUpdate->title = $request->title_1;
         $pageContentUpdate->image = $image ? $image : $pageContentUpdate->image;
         $pageContentUpdate->text = $request->text_1;
@@ -98,7 +99,7 @@ class AdminController extends Controller
         //     ]);
         // }
 
-        $image = uploadImage($request->image_1, 'uploads/services');
+        $image = uploadImage($request->image_1, 'public/uploads/services');
         $pageContentUpdate = PageContent::findOrFail($page_content_id);
         $pageContentUpdate->title = $request->title_1;
         $pageContentUpdate->image = $image ? $image : $pageContentUpdate->image;

@@ -31,7 +31,7 @@
                             <td>{{ $service['title'] }}</td>
                             <td>
                                 <a href="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/edit') }}">Bearbeiten</a>
-                                <form action="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/delete') }}">
+                                <form action="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/delete') }}" method="post">
                                     @csrf
                                     <button type="submit" onclick="return confirm('Are you sure?')">Löschen</button>
                                 </form>

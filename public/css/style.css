@@ -1976,8 +1976,9 @@ input[disabled]:hover {
 		}
 }
 
-
-
-
+img.ap_pi {
+	height: 300px;
+	width: auto;
+}
 
 

@@ -11,6 +11,9 @@
     
             <label>Image</label>
             <input type="file" name="image_1">
+            @if($pageContents[0]['image'])
+                <img src="{{ asset('storage/uploads/about_us/' . $pageContents[0]['image']) }}" class="ap_pi">
+            @endif
             <label>Text</label>
             <textarea name="text_1">{{ $pageContents[0]['text'] }}</textarea>
 
