@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Admin Services')
+@section('title', 'Admin Seite')
 
 @section('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.0/sweetalert2.min.css">
@@ -9,13 +9,13 @@
 <div class="admin_panel_main">
     @include('partials.admin._sidebar')
     <div class="main">
-        <a href="{{ url('admin/pages/services/create') }}">Erstellen</a>
+        <a href="{{ url('admin/pages/services/create') }}">Neue Dienstleistung hinzufügen</a>
         <table>
             <thead>
                 <tr>
-                    <th>Service Image</th>
-                    <th>Service Name</th>
-                    <th>Manage Service</th>
+                    <th>Bild Dienstleistung</th>
+                    <th>Dienstleistung</th>
+                    <th>verwalten</th>
                 </tr>
             </thead>
             <tbody>

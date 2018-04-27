@@ -1798,14 +1798,14 @@ input[disabled]:hover {
 }
 
 
-.main input[type=file] {
+/*.main input[type=file] {
 	margin-bottom: 40px;
     padding: 13px;
     margin-top: 5px;
     padding-right: 0;
 	display:block;
 	margin-left:40%;
-}
+}*/
 .main input[type=text] {
 	margin-bottom:50px;
 }
@@ -2034,6 +2034,53 @@ input[disabled]:hover {
 img.ap_pi {
 	height: 300px;
 	width: auto;
+	margin: 20px auto;
+    display: block;
 }
 
+/****** Custom Input File ******/
+.custom-input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
 
+.custom-input-file + label {
+    max-width: 80%;
+    font-size: 20px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.custom-input-file:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.custom-input-file + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.custom-input-file + label {
+    color: #fff;
+    background-color: #4387FF;
+}
+
+.custom-input-file:focus + label,
+.custom-input-file + label:hover {
+    background-color: #3C7AE9;
+}

@@ -72,8 +72,8 @@ class AdminController extends Controller
 
         $servicesCount = PageContent::where('page_id', 4)->count();
 
-        if ($servicesCount >= 10) {
-            return redirect()->action('AdminController@getPage', ['page_slug' => 'services'])->with('error', 'Sorry, but you have exceeded maximum number of services that can be added.');
+        if ($servicesCount >= 5) {
+            return redirect()->action('AdminController@getPage', ['page_slug' => 'services'])->with('error', 'Sie haben die max. Anzahl erlaubten Seiten erreicht.');
         }
 
         $image = uploadImage($request->image_1, 'public/uploads/services');

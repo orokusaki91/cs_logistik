@@ -9,9 +9,7 @@
 @section('content')
 <div class="admin_panel_main">
     @include('partials.admin._sidebar')
-    <div class="main">
-        Welcome To admin Page
-    </div>
+    <div class="main">Willkommen zur Admin-Seite</div>
 @stop
 
 @section('scripts')
@@ -19,7 +17,7 @@
 	@if(Session::has('password_reseted'))
 		<script>
 			swal(
-		    	'Erledigt!',
+		    	'Fehler!',
 		    	'{{ Session::get('password_reseted') }}',
 		    	'success'
 		    );

@@ -96,38 +96,38 @@
                 <div class="contact_us_desno">
                     <form action="{{ url('ajax/contact') }}" method="post" id="contactForm">
                         <label for="name">Name*</label>
-                        <input type="text" id="fname" name="name" placeholder="Your name..">
+                        <input type="text" id="fname" name="name" placeholder="Name">
                         <p class="thisfield">
                             @if ($errors->has('name'))
                                 {{ $errors->first('name') }}
                             @endif
                         </p>
                         <br>
-                        <label for="lname">Email*</label>
-                        <input type="text" id="email" name="email" placeholder="Your email..">
+                        <label for="lname">Emailadresse*</label>
+                        <input type="text" id="email" name="email" placeholder="Emailadresse">
                         <p class="thisfield">
                             @if ($errors->has('email'))
                                 {{ $errors->first('email') }}
                             @endif
                         </p>
                         <br>
-                        <label for="Subject">Subject*</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject..">     
+                        <label for="Subject">Betreff*</label>
+                        <input type="text" id="subject" name="subject" placeholder="Betreff">     
                         <p class="thisfield">
                             @if ($errors->has('subject'))
                                 {{ $errors->first('subject') }}
                             @endif
                         </p>
                         <br><br>
-                        <label for="Messages">Message*</label><br>
-                        <textarea style="width:99%;" rows="6" cols="79" name="comment"></textarea>
+                        <label for="Messages">Nachricht*</label><br>
+                        <textarea style="width:99%;" rows="6" cols="79" name="comment" placeholder="Nachricht"></textarea>
                         <p class="thisfield">
                             @if ($errors->has('comment'))
                                 {{ $errors->first('comment') }}
                             @endif
                         </p>
                         {{ csrf_field() }}
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Bestätigen">
                     </form>
                 </div>
             </div>

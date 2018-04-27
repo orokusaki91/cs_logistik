@@ -45,7 +45,7 @@ class ResetPassword extends Notification
         $url = url('password/reset', $this->token);
 
         return (new MailMessage)->from('hello@cslogistik.ch', 'Cs Logistik')
-                                ->action('Reset Password Request', $url)
+                                ->action('Passwort zurücksetzen aufheben', $url)
                                 ->view('emails.passwordReset');
     }
 
