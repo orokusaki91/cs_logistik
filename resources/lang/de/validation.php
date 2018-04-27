@@ -237,6 +237,7 @@ return [
         "sexes.1" => 'Typ',
         'subject' => 'Betreff',
         'comment' => 'Kommentar',
+        'image_1' => 'Bild',
     ],
 
 ];

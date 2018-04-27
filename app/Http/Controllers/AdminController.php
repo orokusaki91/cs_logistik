@@ -31,11 +31,13 @@ class AdminController extends Controller
 
     public function postPage(Request $request)
     {
-    	// if ($request->has(image_1)) {
-    	// 	$this->validate($request, [
-	    //         'image_1' => 'dimensions:min_width=1920,min_height=1080'
-	    //     ]);
-    	// }
+        // dimensionsToCheck();
+        // dd();
+    	if ($request->has('image_1')) {
+    		$this->validate($request, [
+	            'image_1' => 'dimensions:min_width=1920,min_height=1080'
+	        ]);
+    	}
 
     	$pageContents = PageContent::where('page_id', $request->page_id)->get();
         $slug = Page::where('id', $request->page_id)->value('slug');

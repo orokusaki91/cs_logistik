@@ -43,7 +43,7 @@
                         </tr>
                     @endforeach
                 @else
-                    <h2>You don't have any services. Click <a href="{{ url('admin/pages/services/create') }}">HERE</a> to add one.</h2>
+                    <h2>Sie haben momentan keine Dienstleistungen vorhanden.</h2>
                 @endif
             </tbody>
         </table>
@@ -67,7 +67,7 @@
     @if(Session::has('error'))
         <script>
             swal(
-            'Error',
+            'Fehler!',
             '{{ Session::get('error') }}',
             'error'
             );
