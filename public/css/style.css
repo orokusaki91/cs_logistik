@@ -1089,7 +1089,7 @@ display:none;
 	}
 	
 	.main {
-		margin-top:5%;
+		margin-top:150px !important;
 	}
 	.main_who_we_are {
 		margin-left:25%;
@@ -1179,13 +1179,16 @@ display:none;
 		#testimonials blockquote {
 		margin-left:0%;
 	}
+	.main:nth-of-type(1){
+		margin-top:140px !important;
+	}
 	.main {
 			float:none;
 			margin-left:25%;
-			margin-top:0%;
+			margin-top:5% !important;
 			width:50%;
-		}
-		.work-article {
+	}
+	.work-article {
 		width:70%;
 		margin-left:10%;
 	}
@@ -1270,9 +1273,6 @@ display:none;
 	}
 
 
-
-
-
 @media (min-width: 321px) and (max-width: 575px) {
 #navigation nav {
 		width:100%;
@@ -1284,14 +1284,17 @@ display:none;
 		#testimonials blockquote {
 		margin-left:0%;
 	}
+	.main:nth-of-type(1){
+		margin-top:180px !important;
+	}
 	.main {
 			float:none;
 			margin-left:25%;
-			margin-top:12%;
+			margin-top:5% !important;
 			width:50%;
-		}
-		
-		.work-article {
+	}
+	
+	.work-article {
 		float:none;
 		margin-left:5%;
 		width:90%;
@@ -1389,12 +1392,15 @@ display:none;
 		width:100%;
 	}
 	
-		.main {
+	.main:nth-of-type(1){
+		margin-top:180px !important;
+	}
+	.main {
 			float:none;
-			margin-top:35%;
-			margin-left:25%;
-			width:50%;
-		}
+			margin-left:10%;
+			margin-top:5% !important;
+			width:80%;
+	}
 	#contact_us {
 		width:95%;
 	}
