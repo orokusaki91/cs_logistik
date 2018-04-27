@@ -1,6 +1,6 @@
 <nav>  
    <div class="admin_panel_head">
-    	<h1>CS Logistik Admin</h1>
+    	<h1><a href="{{ url('admin') }}" style="text-decoration: none; color: #fff">CS Logistik Admin</a></h1>
      	@if(Auth::check())
 			<form action="{{ url('admin/logout') }}" method="post">
 	      		{{ csrf_field() }}

@@ -37,7 +37,7 @@
                                 <a href="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/edit') }}">Bearbeiten</a>
                                 <form action="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/delete') }}" method="post">
                                     @csrf
-                                    <button type="submit" onclick="return confirm('Are you sure?')">Löschen</button>
+                                    <button type="submit" onclick="return confirm('Sind Sie sicher?')">Löschen</button>
                                 </form>
                             </td>
                         </tr>
