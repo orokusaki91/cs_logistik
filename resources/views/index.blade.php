@@ -28,23 +28,23 @@
 <!-- Middle -->
 <div id="sredina">
     <br><br><br><br>
-    <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
-    <div class="sredina_levo">
-        <img src="{{ asset('storage/uploads/about_us/' . $aboutUs->image) }}" alt="">
-    </div>
-    <div class="sredina_desno">
-        <h3>Die Firma CS Logistik GmbH in Zahlen:</h3>
-        <img src="{{ asset('img/kosa-bela.png') }}" alt="" class="kosa-bela">
-        <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina1">
-        <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina2">
-        <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina3">
-        {!! $aboutUs->text !!}
+    <img src="{{ asset('img/kosa.png') }}" class="kosa-plava">
+    <div class="sredina-container">
+        <div style="background: url({{ asset('storage/uploads/about_us/' . $aboutUs->image) }}) no-repeat; background-size: cover; min-width: 50%;"></div>
+        <div class="sredina_desno">
+            <h3>Die Firma CS Logistik GmbH in Zahlen:</h3>
+            <img src="{{ asset('img/kosa-bela.png') }}" alt="" class="kosa-bela">
+            <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina1">
+            <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina2">
+            <img src="{{ asset('img/sredina/small-truck.png') }}" class="kosa-sredina3">
+            {!! $aboutUs->text !!}
+        </div>
     </div>
 </div>
 <br><br><br><br>
 <img src="{{ asset('img/kosa.png') }}" alt="" class="kosa-plava">
 <br><br><br><br>
-<div id="testimonials" style="background: url({{ asset('storage/uploads/slogan/' . $slogan->image) }}) fixed no-repeat center;">
+<div id="testimonials" style="background: url({{ asset('storage/uploads/slogan/' . $slogan->image) }}) fixed no-repeat center; background-size: cover;">
     <div class="wrapper">
         <div class="slider">
             {!! $slogan->text !!}

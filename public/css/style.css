@@ -246,11 +246,7 @@ header {
 	height:100%;
 }
 .sredina_desno {
-	width:50%;
-	float:right;
 	background:#4387FF;
-	height:420px;
-	margin-top:100px;
 	position:relative;
 }
 
@@ -2062,12 +2058,11 @@ img.ap_pi {
     margin-bottom: 15px;
 }
 
-<<<<<<< HEAD
 .alert .alert-success {
 	display:block;
 	width:100%;
 }
-=======
+
 .custom-input-file:focus + label {
     outline: 1px dotted #000;
     outline: -webkit-focus-ring-color auto 5px;
@@ -2091,4 +2086,9 @@ img.ap_pi {
 .custom-input-file + label:hover {
     background-color: #3C7AE9;
 }
->>>>>>> c71b504fb575d85726de12654346e1c59fb2322e
+
+
+.sredina-container {
+	margin-top: 100px;
+	display: flex;
+}

@@ -16,10 +16,6 @@
                 $homeFooter3 = $pageContents[3];
             @endphp
 
-            @if($errors->any())
-                {{ dd($errors) }}
-            @endif
-
             <h3>Titelseite</h3>
             <label>Bild</label>
             @if($homeHeader['image'])

@@ -1,5 +1,5 @@
 <div id="navigation">
-    <header style="background: url({{ asset('storage/uploads/home/' . $homeHeader->image) }}) no-repeat 50% 50%">
+    <header style="background: url({{ asset('storage/uploads/home/' . $homeHeader->image) }}) no-repeat center center; background-size: cover;">
         <nav>
             <div class="menu-icon">
                 <i class="fa fa-bars fa-2x"></i>
