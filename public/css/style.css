@@ -2036,4 +2036,7 @@ img.ap_pi {
 	width: auto;
 }
 
-
+.alert .alert-success {
+	display:block;
+	width:100%;
+}
