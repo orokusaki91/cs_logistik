@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'Admin Services')
+@section('title', 'Admin Seite')
 
 @section('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.0/sweetalert2.min.css">
@@ -9,13 +9,13 @@
 <div class="admin_panel_main">
     @include('partials.admin._sidebar')
     <div class="main">
-        <a href="{{ url('admin/pages/services/create') }}">Erstellen</a>
+        <a href="{{ url('admin/pages/services/create') }}">Neue Dienstleistung hinzufügen</a>
         <table>
             <thead>
                 <tr>
-                    <th>Service Image</th>
-                    <th>Service Name</th>
-                    <th>Manage Service</th>
+                    <th>Bild Dienstleistung</th>
+                    <th>Dienstleistung</th>
+                    <th>verwalten</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,13 +37,13 @@
                                 <a href="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/edit') }}">Bearbeiten</a>
                                 <form action="{{ url('admin/pages/services/' . $pageContents[$key]['id'] . '/delete') }}" method="post">
                                     @csrf
-                                    <button type="submit" onclick="return confirm('Are you sure?')">Löschen</button>
+                                    <button type="submit" onclick="return confirm('Sind Sie sicher?')">Löschen</button>
                                 </form>
                             </td>
                         </tr>
                     @endforeach
                 @else
-                    <h2>You don't have any services. Click <a href="{{ url('admin/pages/services/create') }}">HERE</a> to add one.</h2>
+                    <h2>Sie haben momentan keine Dienstleistungen vorhanden.</h2>
                 @endif
             </tbody>
         </table>
@@ -67,7 +67,7 @@
     @if(Session::has('error'))
         <script>
             swal(
-            'Error',
+            'Fehler!',
             '{{ Session::get('error') }}',
             'error'
             );

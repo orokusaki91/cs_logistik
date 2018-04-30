@@ -9,7 +9,7 @@
     	</p>
     </div>
     <div class="vrati_na_pocetak">
-    	<a href="#navigation">Pocetak stranice &nbsp;&nbsp;&nbsp;<i class="fa fa-angle-up" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;</a>
+    	<a href="#navigation">Zurück nach oben &nbsp;&nbsp;&nbsp;<i class="fa fa-angle-up" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;</a>
     </div>
 </div>
 @include('partials._scripts')
