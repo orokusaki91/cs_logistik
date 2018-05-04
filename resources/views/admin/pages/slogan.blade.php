@@ -6,8 +6,8 @@
     @include('partials.admin._sidebar')
     <div class="main">
         <form action="{{ url('admin/pages/update') }}" method="post" enctype="multipart/form-data">
-            @method('PUT')
-            @csrf
+            {{ csrf_field() }}
+            {{ method_field('PUT') }}
     
             <label>Bild</label>
             @if($pageContents[0]['image'])

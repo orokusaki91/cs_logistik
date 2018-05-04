@@ -6,8 +6,8 @@
     @include('partials.admin._sidebar')
     <div class="main">
         <form action="{{ url('admin/pages/services/' . $serviceContent->id . '/update') }}" method="post" enctype="multipart/form-data">
-            @method('PUT')
-            @csrf
+            {{ csrf_field() }}
+            {{ method_field('PUT') }}
     
             <label>Bild</label>
             @if($serviceContent->image)

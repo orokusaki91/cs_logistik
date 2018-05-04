@@ -5,8 +5,7 @@
 @section('content')
 
 <form method="POST" action="{{ route('password.request') }}" class="adminlogin">
-    @csrf
-
+    {{ csrf_field() }}
     <input type="hidden" name="token" value="{{ $token }}">
 
     <div class="form-group row">

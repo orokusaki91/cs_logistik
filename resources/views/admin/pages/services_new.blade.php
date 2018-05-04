@@ -6,7 +6,7 @@
     @include('partials.admin._sidebar')
     <div class="main">
         <form action="{{ url('admin/pages/services/store') }}" method="post" enctype="multipart/form-data">
-            @csrf
+            {{ csrf_field() }}
 
             <label>Bild</label>
             <input type="file" id="image_1" name="image_1" class="custom-input-file"/>
