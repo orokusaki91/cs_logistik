@@ -5,7 +5,7 @@
 @section('content')
 
     <form method="POST" action="{{ route('login') }}" class="adminlogin">
-        @csrf
+        {{ csrf_field() }}
         <div class="form-group row">
             <label for="email" class="col-sm-4 col-form-label text-md-right">Emailadresse</label>
 
