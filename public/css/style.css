@@ -1595,7 +1595,7 @@ display:none;
 /* ADMIN PANEL *//* ADMIN PANEL */
 /* ADMIN PANEL *//* ADMIN PANEL */
 /* ADMIN PANEL *//* ADMIN PANEL */
-.admin_panel_head {
+.admin_panel_head_inner {
 	height:60px;
 	background:#333;
 	overflow:hidden;
@@ -1604,14 +1604,14 @@ display:none;
 	position:relative;
 	box-shadow:0px 1px 4px #333;
 }
-.admin_panel_head h1 {
+.admin_panel_head_inner h1 {
 	margin:0;
 	float:left;
 	padding:10px;
 	color:#fff;
 	margin-top:5px;
 }
-.admin_panel_head button[type=submit] {
+.admin_panel_head_inner button[type=submit] {
 	margin:10px;
 	padding:10px;
 	text-decoration:none;
@@ -1624,7 +1624,7 @@ display:none;
 	outline:none;
 	margin-top:12px;
 }
-.admin_panel_head button[type=submit]:hover {
+.admin_panel_head_inner button[type=submit]:hover {
 	color:#333;
 	border:1px solid #333;
 	background:#fff;
@@ -1744,12 +1744,6 @@ input[disabled]:hover {
 
 
 
-
-
-
-
-
-
 .admin_panel_main .main {
 	width:80%;
 	margin-right:15px;
@@ -1760,7 +1754,7 @@ input[disabled]:hover {
 	color:#000 !important;
 }
 
-.admin_panel_head {
+.admin_panel_head_inner {
 	position:fixed;
 	width:100%;
 	top:0;
@@ -1980,12 +1974,12 @@ input[disabled]:hover {
 			display:block;
 			position:relative;
 		}
-		.admin_panel_head button[type=submit] {
+		.admin_panel_head_inner button[type=submit] {
 			margin:0;
 			margin-top:10px;
 		}
 	
-		.admin_panel_head button[type=submit]:first-of-type {
+		.admin_panel_head_inner button[type=submit]:first-of-type {
 			display:none;
 		}
 }
@@ -2016,10 +2010,10 @@ input[disabled]:hover {
 			display:block;
 			position:relative;
 		}
-		.admin_panel_head {
+		.admin_panel_head_inner {
 			height:130px;
 		}
-		.admin_panel_head button[type=submit]:first-of-type {
+		.admin_panel_head_inner button[type=submit]:first-of-type {
 			display:none;
 		}
 		
