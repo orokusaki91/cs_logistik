@@ -95,6 +95,7 @@ header {
       width: 100%;
       line-height: 60px;
       z-index: 1;
+	  background:rgba(255,255,255,0.4);
 }
 
 #navigation  nav ul {
